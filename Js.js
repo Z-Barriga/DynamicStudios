@@ -41,10 +41,3 @@ function switchSection(direction) {
     sections[currentSection].classList.add('active');
 }
 
-// Add event listeners for next and prev buttons
-
-const nextButton = document.querySelector('#next');
-const prevButton = document.querySelector('#prev');
-
-nextButton.addEventListener('click', () => switchSection(1));
-prevButton.addEventListener('click', () => switchSection(-1));
