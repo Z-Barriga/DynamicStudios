@@ -23,3 +23,28 @@ sections.forEach(section => {
         e.target.classList.add('active');
     });
 });
+// Add a function that handle the sections switching
+
+let currentSection = 0;
+
+function switchSection(direction) {
+    sections[currentSection].classList.remove('active');
+    currentSection += direction;
+    // if the current section is less than 0, set the current section to the last section
+    if (currentSection < 0) {
+        currentSection = sections.length - 1;
+    } 
+    // if the current section is greater than the total number of sections, set the current section to the first section
+    else if (currentSection > sections.length - 1) {
+        currentSection = 0;
+    }
+    sections[currentSection].classList.add('active');
+}
+
+// Add event listeners for next and prev buttons
+
+const nextButton = document.querySelector('#next');
+const prevButton = document.querySelector('#prev');
+
+nextButton.addEventListener('click', () => switchSection(1));
+prevButton.addEventListener('click', () => switchSection(-1));
