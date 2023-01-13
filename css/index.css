@@ -40,7 +40,7 @@ background-color: ghostwhite;
 .topnav li.right {
 float: right;
 }
-/ Media query for small screens */
+/* Media query for small screens */
 @media screen and (max-width: 720px) {
 ul.topnav li{
 width: 100%;
