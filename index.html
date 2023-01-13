@@ -160,20 +160,6 @@
   For supporting roaming users, an SSL VPN is generally a better choice because it requires no installation or configuration on the client machine and enforces endpoint security.
 </p>
 </div>
-<script>
-        // Select all the sections 
-        const sections = document.querySelectorAll('.section');
-
-        // Add click event listener to all the sections
-        sections.forEach(section => {
-            section.addEventListener('click', e => {
-                // Remove the active class from all sections
-                sections.forEach(section => section.classList.remove('active'));
-                // Add the active class to the clicked section
-                e.target.classList.add('active');
-            });
-        });
-    </script>
 </body>
 
 <footer>
@@ -198,4 +184,18 @@
   </div>
 <p style="color:whitesmoke;">Created by José Barriga @ DynamicStudios © 2022</p>
 </footer>
+	<script>
+    // Select all the sections 
+    const sections = document.querySelectorAll('section');
+
+    // Add click event listener to all the sections
+    sections.forEach(section => {
+        section.addEventListener('click', e => {
+            // Remove the active class from all sections
+            sections.forEach(section => section.classList.remove('active'));
+            // Add the active class to the clicked section
+            e.target.classList.add('active');
+        });
+    });
+</script>
 </html>
