@@ -9,7 +9,6 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
-	<script src="Js.js"></script>
 <style>
         /* Add a class for the sections */
         .section {
@@ -113,15 +112,28 @@
     </div>
   </div>
 </nav>    
-	
-<section class="section" id="section1">>
+<script>
+        // Select all the sections 
+        const sections = document.querySelectorAll('.section');
+
+        // Add click event listener to all the sections
+        sections.forEach(section => {
+            section.addEventListener('click', e => {
+                // Remove the active class from all sections
+                sections.forEach(section => section.classList.remove('active'));
+                // Add the active class to the clicked section
+                e.target.classList.add('active');
+            });
+        });
+    </script>
+<div id="section1" class="container-fluid">
   <h1>Datacenter Solutions</h1>
   <p>
   Data center solutions refer to the products and services needed to create and maintain a data center. Products include IT equipment, like servers, routers, storage systems, and firewalls, as well as supporting infrastructure for the physical data center, like cooling systems, batteries, generators and cabling. Services include technical support, installation, and configuration.
   Depending on size and needs, a business may use its own data centers or it may share a section of a data center with other tenants. Consequently, data center solutions can include just the setup and maintenance of certain racks within a data center, or they can expand to include the design and construction of an entirely new, proprietary data center.
 </p>
 </div>
-<section class="section" id="section2">>
+<div id="section2" class="container-fluid">
   <h1>Fiber Optics Solutions</h1>
   <p>
     Today, practically every communication network contains fiber optics. In most cases, fiber optics are used because of their convenience.
@@ -131,7 +143,7 @@
     The use of fiber optics is not just limited to communication networks. Utilities also prefer fiber for noise immunity, security and high bandwidth properties.
   </p>
 </div>
-<section class="section" id="section3">>
+<div id="section3" class="container-fluid">
   <h1>Network Solutions</h1>
   <p>
     In today’s rapidly evolving digital world, a network that is agile, responsive, and secure will be the key that unlocks your company’s true potential. 
@@ -139,7 +151,7 @@
     Indeed, a secured, automated, and scalable network welcomes success. We provide a platform that can support today’s digital demands and can adapt to your future needs.
   </p>
 </div>
-<section class="section" id="section41">>
+<div id="section41" class="container-fluid">
   <h1>VPN Solutions - VPN</h1>
   <p>
    What Can a VPN Do for You?
@@ -153,13 +165,14 @@
    Some also block ads and pop-ups. This stops malicious ads from infecting your device with malware.
  </p>
 </div>
-<section class="section" id="section42">>
+<div id="section42" class="container-fluid">
   <h1>VPN Solutions - IPSEC</h1>
   <p>
   An IPsec VPN uses the standard IPsec mechanism to establish a VPN over the public Internet. An IPsec VPN is most useful for establishing a VPN between fixed end-points, such as two offices.
   For supporting roaming users, an SSL VPN is generally a better choice because it requires no installation or configuration on the client machine and enforces endpoint security.
 </p>
 </div>
+
 </body>
 
 <footer>
@@ -184,18 +197,4 @@
   </div>
 <p style="color:whitesmoke;">Created by José Barriga @ DynamicStudios © 2022</p>
 </footer>
-	<script>
-    // Select all the sections 
-    const sections = document.querySelectorAll('section');
-
-    // Add click event listener to all the sections
-    sections.forEach(section => {
-        section.addEventListener('click', e => {
-            // Remove the active class from all sections
-            sections.forEach(section => section.classList.remove('active'));
-            // Add the active class to the clicked section
-            e.target.classList.add('active');
-        });
-    });
-</script>
 </html>
