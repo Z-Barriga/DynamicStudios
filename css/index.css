@@ -31,7 +31,7 @@ font-size: 17px;
 border-right: 1px solid #bbb;
 }
 .topnav li a:hover:not(.active) {
-background-color: #ddd;
+background-color:ghostwhite;
 color: black;
 }
 .topnav li a.active {
@@ -49,7 +49,21 @@ ul.topnav a{
 width: 100%;
 }
 }
+/* Add a class for the sections */
+        .section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
 
+        /* Add a class for the active section */
+        .active {
+            opacity: 1;
+        }
 /* Section styles */
 #section1 {
 padding-top: 50px;
